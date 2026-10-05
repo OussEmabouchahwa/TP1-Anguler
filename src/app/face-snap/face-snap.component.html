@@ -1,0 +1,23 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500
+&display=swap" rel="stylesheet"> 
+<div class="face-snap-card">
+<div [ngClass]="{ fond: snaps<100 , fond2: snaps>=100 }">
+<h2>{{ title | uppercase }}</h2>
+<h2>{{ title | titlecase }}</h2>
+<h2>{{ title | lowercase }}</h2>*
+<p>FaceSnap créée le {{ createdAt | date }}</p>
+
+<h2>{{ title }}</h2>
+<p>Mis en ligne le {{ createdAt }}</p>
+<p>{{ description }}</p>
+<p> {{ snaps }}</p>
+<img src="{{ 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddybear-792273_1280.jpg' }}" alt="{{ title }}">
+<p>
+ <button (click)="onSnap()">{{ buttonText }}</button>
+
+<span [ngStyle]="{ color: 'rgb(0, ' + snaps + ', 0)' }"> {{ snaps }}</span>
+</p>
+</div>

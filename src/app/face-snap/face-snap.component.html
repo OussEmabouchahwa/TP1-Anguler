@@ -7,9 +7,22 @@ href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500
 <div [ngClass]="{ fond: snaps<100 , fond2: snaps>=100 }">
 <h2>{{ title | uppercase }}</h2>
 <h2>{{ title | titlecase }}</h2>
-<h2>{{ title | lowercase }}</h2>*
-<p>FaceSnap créée le {{ createdAt | date }}</p>
+<h2>{{ title | lowercase }}</h2>**
+<p>{{ 4346234.36 }}</p>
+<p>{{ 4346234.36 | number :'1.0-0' }}</p>
+<p>{{ 4346234.361117125 | number :'1.0-5' }}</p>
+<p>{{ 4346234.361117125 | number :'1.0-5' }}</p>
 
+<p>{{ 4346234.36 | number  }}</p>
+<p>{{ 0.336 | percent }}</p>
+<p>{{ 0.336 | percent: '1.0-1' }}</p>
+<p>{{ 344.36 | currency }}</p>
+<p>{{ 344.36 | currency: 'EUR' }}</p>
+<p>{{ 344.36 | currency: 'EUR' : 'code' }}</p>
+
+
+<p>FaceSnap créée le {{ createdAt | date: 'd MMMM yyyy, à HH:mm'
+}}</p>
 <h2>{{ title }}</h2>
 <p>Mis en ligne le {{ createdAt }}</p>
 <p>{{ description }}</p>
